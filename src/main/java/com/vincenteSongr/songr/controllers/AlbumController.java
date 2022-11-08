@@ -19,6 +19,10 @@ public class AlbumController {
         Album motleyCrue = new Album("Dr. Feelgood", "Motley Crue", 16, 4027, "/imgURL2");
         Album zBB = new Album("The Foundation", "Zac Brown Band", 12, 2559, "/imgURL3");
 
+        albumArrayList.add(marcAnthony);
+        albumArrayList.add(motleyCrue);
+        albumArrayList.add(zBB);
+
         a.addAttribute("marcAnthony", marcAnthony);
         a.addAttribute("motleyCrue", motleyCrue);
         a.addAttribute("zBB", zBB);
