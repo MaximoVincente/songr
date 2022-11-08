@@ -1,6 +1,4 @@
-package com.vincenteSongr.songr.album;
-
-import java.util.ArrayList;
+package com.vincenteSongr.songr.model;
 
 public class Album {
 
@@ -59,5 +57,10 @@ private String imageURL;
 
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
+    }
+
+    @Override
+    public String toString() {
+        return "Album " + this.title + " from " + this.artist + " and its " + this.songCount + " hit songs!";
     }
 }
