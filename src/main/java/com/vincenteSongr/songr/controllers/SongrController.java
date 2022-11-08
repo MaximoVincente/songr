@@ -12,11 +12,8 @@ import java.util.ArrayList;
 @Controller
 public class SongrController {
 
-
-
     @GetMapping("/hello")
     public String getHello() {
-
         return "hello.html";
     }
 
@@ -29,7 +26,6 @@ public class SongrController {
 
     @GetMapping("/")
     public String splashPage() {
-
         return "splash.html";
     }
 

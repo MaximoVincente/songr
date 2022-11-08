@@ -13,13 +13,11 @@ class SongrApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 	@Test
 	void testToString() {
 		Album sut = new Album("The Razors Edge", "AC/DC", 12, 2802, "imgURL");
 		assertEquals(sut.toString(), "Album The Razors Edge from AC/DC and its 12 hit songs!");
 	}
-
 	@Test
 	void testAddAlbum(){
 		Album sut = new Album("The Razors Edge", "AC/DC", 12, 2802, "imgURL");
