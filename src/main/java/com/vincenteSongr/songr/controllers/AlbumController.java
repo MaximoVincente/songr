@@ -32,19 +32,4 @@ public class AlbumController {
         albumRepository.save(newAlbum);
         return new RedirectView("/album");
     }
-
-
-//        ArrayList<Album> albumArrayList = new ArrayList<>();
-
-//        Album marcAnthony = new Album("3.0", "Marc Anthony", 10, 2508, "/imgURL");
-//        Album motleyCrue = new Album("Dr. Feelgood", "Motley Crue", 16, 4027, "/imgURL2");
-//        Album zBB = new Album("The Foundation", "Zac Brown Band", 12, 2559, "/imgURL3");
-//
-//        albumArrayList.add(marcAnthony);
-//        albumArrayList.add(motleyCrue);
-//        albumArrayList.add(zBB);
-//
-//        a.addAttribute("marcAnthony", marcAnthony);
-//        a.addAttribute("motleyCrue", motleyCrue);
-//        a.addAttribute("zBB", zBB);
 }
