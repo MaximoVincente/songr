@@ -6,13 +6,6 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<ul th:text="'Favorite Albums: ' + ${album}">
-    <li th:text="'Album: ' + ${albumTitle.title}"></li>
-    <li th:text="'Artist: ' + ${albumTitle.artist}"></li>
-    <li th:text="'Song Count: ' + ${albumTitle.songCount}"></li>
-    <li th:text="'Length: ' + ${albumTitle.length}"></li>
-    <li th:text="'Image: ' + ${albumTitle.imageURL}"></li>
-</ul>
 
 <form action="/album" method="post">
     <fieldset>
@@ -31,6 +24,13 @@
     </fieldset>
 </form>
 
+<ul th:each="favoriteAlbums : ${album}">
+    <li th:text="'Album: ' + ${favoriteAlbums.title}"></li>
+    <li th:text="'Artist: ' + ${favoriteAlbums.artist}"></li>
+    <li th:text="'Song Count: ' + ${favoriteAlbums.songCount}"></li>
+    <li th:text="'Length: ' + ${favoriteAlbums.length}"></li>
+    <li th:text="'Image: ' + ${favoriteAlbums.imageURL}"></li>
+</ul>
 <!--<p th:text="${marcAnthony}"></p>-->
 <!--<p th:text="${motleyCrue}"></p>-->
 <!--<p th:text="${zBB}"></p>-->
