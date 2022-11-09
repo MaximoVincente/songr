@@ -6,8 +6,33 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<p th:text="${marcAnthony}"></p>
-<p th:text="${motleyCrue}"></p>
-<p th:text="${zBB}"></p>
+<ul th:text="'Favorite Albums: ' + ${album}">
+    <li th:text="'Album: ' + ${albumTitle.title}"></li>
+    <li th:text="'Artist: ' + ${albumTitle.artist}"></li>
+    <li th:text="'Song Count: ' + ${albumTitle.songCount}"></li>
+    <li th:text="'Length: ' + ${albumTitle.length}"></li>
+    <li th:text="'Image: ' + ${albumTitle.imageURL}"></li>
+</ul>
+
+<form action="/album" method="post">
+    <fieldset>
+        <legend>Favorite Albums</legend>
+        <label>Album Title</label>
+        <input type="text" name="title"/>
+        <label>Artist</label>
+        <input type="text" name="artist">
+        <label>Song Count</label>
+        <input type="text" name="songCount">
+        <label>Length</label>
+        <input type="text" name="length">
+        <label>Image</label>
+        <input type="text" name="imageURL">
+        <input type="submit" value="Add Album">
+    </fieldset>
+</form>
+
+<!--<p th:text="${marcAnthony}"></p>-->
+<!--<p th:text="${motleyCrue}"></p>-->
+<!--<p th:text="${zBB}"></p>-->
 </body>
 </html>
