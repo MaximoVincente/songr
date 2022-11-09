@@ -17,6 +17,10 @@ private int songCount;
 private int length;
 private String imageURL;
 
+
+    protected Album() {
+    }
+
     public Album(String title, String artist, int songCount, int length, String imageURL) {
         this.title = title;
         this.artist = artist;
@@ -25,8 +29,7 @@ private String imageURL;
         this.imageURL = imageURL;
     }
 
-    protected Album() {
-    }
+
 
     public String getTitle() {
         return title;
