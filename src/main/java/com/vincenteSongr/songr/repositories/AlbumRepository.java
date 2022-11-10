@@ -12,4 +12,5 @@ public interface AlbumRepository extends JpaRepository<Album, Long> {
     public Album findByImageURL(String imageUrl);
 
 
+
 }
