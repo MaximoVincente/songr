@@ -30,9 +30,36 @@
     <li th:text="'Song Count: ' + ${favoriteAlbums.songCount}"></li>
     <li th:text="'Length: ' + ${favoriteAlbums.length}"></li>
     <li th:text="'Image: ' + ${favoriteAlbums.imageURL}"></li>
+
+    <div>Songs</div>
+<ul th:each="favoriteSong : ${favoriteAlbums.albumSongs}">
+    <li th:text="'Title: ' + ${favoriteSong.title}"></li>
+    <li th:text="'Length: ' + ${favoriteSong.length}"></li>
+    <li th:text="'Track Number: ' + ${favoriteSong.trackNumber}"></li>
 </ul>
-<!--<p th:text="${marcAnthony}"></p>-->
-<!--<p th:text="${motleyCrue}"></p>-->
-<!--<p th:text="${zBB}"></p>-->
+    <form action="/songAdd" method="post">
+        <fieldset>
+            <legend>Favorite Tracks</legend>
+            <label>Title</label>
+            <input type="text" name="title"/>
+            <label>Length</label>
+            <input type="text" name="length">
+            <label>Track Number</label>
+            <input type="text" name="trackNumber">
+            <input type="hidden" name="albumName" th:value="${favoriteAlbums.title}">
+            <input type="submit" value="Add Song">
+        </fieldset>
+    </form>
+</ul>
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
